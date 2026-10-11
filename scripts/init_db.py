@@ -5,13 +5,15 @@ import psycopg
 from dotenv import load_dotenv
 
 load_dotenv()
-schema = Path("db/schema.sql").read_text()
 
 with psycopg.connect(os.environ["DATABASE_URL"]) as conn:
-    conn.execute(schema)
-    tables = conn.execute(
-        "select table_name from information_schema.tables "
-        "where table_schema = 'public' order by table_name"
+    conn.execute(Path("db/schema.sql").read_text())
+    conn.execute(Path("db/seed.sql").read_text())
+
+    projects = conn.execute("select count(*) from projects").fetchone()[0]
+    tasks = conn.execute(
+        "select status, count(*) from tasks group by status order by status"
     ).fetchall()
 
-print("Tables created:", ", ".join(t[0] for t in tables))
+print(f"Projects: {projects}")
+print("Tasks:", ", ".join(f"{status} {n}" for status, n in tasks))
