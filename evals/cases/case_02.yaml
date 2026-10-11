@@ -1,0 +1,37 @@
+id: case_02
+project: OAK-1187
+kind: meeting_note
+title: "Oak Street Bridge - biweekly meeting with Harlan County DOT"
+received: 2026-10-06
+text: |
+  Attendees: Marcus Reed (Harlan County DOT), Jordan Lee, Riley Chen
+
+  1. Load rating analysis: Riley says it is on track for October 21.
+
+  2. Traffic control: the County has decided the lane closure will be
+     limited to nights only, 9pm to 5am. Jordan will send the revised
+     traffic control plan to Marcus by October 30.
+
+  3. Utility relocation: still no schedule from the power company. Marcus
+     will call them this week to push for dates.
+
+  Next meeting: October 20.
+expected:
+  - type: decision
+    project: OAK-1187
+    summary: Lane closure limited to nights only, 9pm to 5am
+    due_date: null
+    owner: null
+    match: "update: Traffic control plan for lane closure"
+  - type: action_item
+    project: OAK-1187
+    summary: Send the revised traffic control plan to the County
+    due_date: 2026-10-30
+    owner: Jordan Lee
+    match: "update: Traffic control plan for lane closure"
+  - type: action_item
+    project: OAK-1187
+    summary: Call the power company to push for relocation dates
+    due_date: null
+    owner: Marcus Reed
+    match: "update: Coordinate power line relocation with utility"

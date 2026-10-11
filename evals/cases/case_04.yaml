@@ -1,0 +1,21 @@
+id: case_04
+project: CR12-0459
+kind: rfi
+title: "RFI 07 - Curve design at Sta. 45+00"
+received: 2026-10-05
+text: |
+  RFI No. 07
+  Project: County Road 12 Widening
+  From: Teresa Nguyen, Harlan County DOT
+
+  Please confirm the design speed used for the horizontal curve at
+  Sta. 45+00 and provide the superelevation calculations.
+
+  Response requested by: October 19, 2026
+expected:
+  - type: request
+    project: CR12-0459
+    summary: Confirm the design speed for the curve at Sta. 45+00 and provide superelevation calculations
+    due_date: 2026-10-19
+    owner: null
+    match: new

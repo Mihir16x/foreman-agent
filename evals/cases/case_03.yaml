@@ -1,0 +1,30 @@
+id: case_03
+project: LKV-3302
+kind: email
+title: "Lot layout revisions"
+received: 2026-10-09
+text: |
+  Hi Sam,
+
+  For the revised lot layout, please include a small pocket park near
+  lot 22. We need the revised layout by October 13 for our board meeting.
+
+  Priya
+
+  ---
+  Follow-up from Priya, same day:
+  Correction - the board meeting moved, so we need the revised lot layout
+  by October 20 instead. Sorry for the confusion.
+expected:
+  - type: request
+    project: LKV-3302
+    summary: Include a pocket park near lot 22 in the revised lot layout
+    due_date: null
+    owner: null
+    match: "update: Revise lot layout per client feedback"
+  - type: deadline
+    project: LKV-3302
+    summary: Revised lot layout now due October 20
+    due_date: 2026-10-20
+    owner: null
+    match: "update: Revise lot layout per client feedback"

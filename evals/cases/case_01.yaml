@@ -1,0 +1,37 @@
+id: case_01
+project: RVS-2041
+kind: email
+title: "RE: DEQ permit and hydraulic model"
+received: 2026-10-08
+text: |
+  Hi Sam,
+
+  Good news - we've signed the owner authorization form, it's attached.
+  Please go ahead and submit the DEQ stormwater permit application.
+
+  Separately, council asked whether the hydraulic model can include a
+  100-year storm check in addition to the 25-year. Can you let us know by
+  October 16 whether that would affect the schedule?
+
+  Thanks,
+  Dana Ortiz
+  Millbrook Public Works
+expected:
+  - type: request
+    project: RVS-2041
+    summary: Submit the DEQ stormwater permit application now that the owner authorization form is signed
+    due_date: null
+    owner: null
+    match: "update: Submit stormwater permit application to state DEQ"
+  - type: request
+    project: RVS-2041
+    summary: Add a 100-year storm check to the hydraulic model
+    due_date: null
+    owner: null
+    match: new
+  - type: request
+    project: RVS-2041
+    summary: Tell the client whether the 100-year storm check affects the schedule
+    due_date: 2026-10-16
+    owner: null
+    match: new

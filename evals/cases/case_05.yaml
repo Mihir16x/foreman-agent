@@ -1,0 +1,31 @@
+id: case_05
+project: null
+kind: email
+title: "Oak Street and County Road 12"
+received: 2026-10-07
+text: |
+  Jordan,
+
+  Two quick things.
+
+  Oak Street: we've approved the strip seal alternative you proposed for
+  the expansion joints. Go ahead and use it in the specifications.
+
+  County Road 12: please hold off on the right-of-way acquisition exhibits
+  until our legal team confirms the parcel list, probably early November.
+
+  Marcus Reed
+  Harlan County DOT
+expected:
+  - type: decision
+    project: OAK-1187
+    summary: County approved the strip seal alternative for the expansion joints
+    due_date: null
+    owner: null
+    match: "update: Expansion joint replacement specifications"
+  - type: request
+    project: CR12-0459
+    summary: Hold the right-of-way acquisition exhibits until county legal confirms the parcel list
+    due_date: null
+    owner: null
+    match: "update: Right-of-way acquisition exhibits"
