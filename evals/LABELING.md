@@ -18,3 +18,4 @@ Rules:
 - "Next <weekday>" means that weekday in the following week (sent Tuesday Oct 6, "next Friday" = Oct 16).
 - Vague timing ("next week", "early November") and dates tied to events ("before the 30% review") are null.
 - An owner is only set if the document names who will do it.
+- A question about whether something can be done is one request (answer the question), not also a request to do the work.

@@ -25,13 +25,7 @@ expected:
     match: "update: Submit stormwater permit application to state DEQ"
   - type: request
     project: RVS-2041
-    summary: Add a 100-year storm check to the hydraulic model
-    due_date: null
-    owner: null
-    match: new
-  - type: request
-    project: RVS-2041
-    summary: Tell the client whether the 100-year storm check affects the schedule
+    summary: Tell the client whether adding a 100-year storm check to the hydraulic model would affect the schedule
     due_date: 2026-10-16
     owner: null
     match: new
