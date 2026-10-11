@@ -1,0 +1,13 @@
+id: case_06
+project: RVS-2041
+kind: email
+title: "Thanks for the site visit"
+received: 2026-10-02
+text: |
+  Hi Sam,
+
+  Thanks for walking us through the outfall area on Tuesday. The team
+  found it really helpful to see the erosion firsthand. Talk soon.
+
+  Dana
+expected: []

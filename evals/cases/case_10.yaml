@@ -1,0 +1,19 @@
+id: case_10
+project: OAK-1187
+kind: email
+title: "Bid documents timing"
+received: 2026-10-09
+text: |
+  Jordan,
+
+  We need the bid documents by November 20 so we can advertise in
+  December. Our board approved the funding last night.
+
+  Marcus
+expected:
+  - type: deadline
+    project: OAK-1187
+    summary: Bid documents now due November 20
+    due_date: 2026-11-20
+    owner: null
+    match: "update: Prepare bid documents"

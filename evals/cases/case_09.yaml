@@ -1,0 +1,33 @@
+id: case_09
+project: RVS-2041
+kind: meeting_note
+title: "Riverside internal design meeting"
+received: 2026-10-07
+text: |
+  Attendees: Sam Patel, Alex Romero, Casey Brooks, Riley Chen
+
+  - Culvert at Sta. 12+40: after reviewing the geotech report, we decided
+    to use a precast box culvert instead of cast-in-place.
+  - Alex will run the 100-year storm scenario in the hydraulic model by
+    October 14.
+  - Casey to survey the culvert inlet sometime next week.
+  - Riley mentioned the geotech report had no surprises.
+expected:
+  - type: decision
+    project: RVS-2041
+    summary: Use a precast box culvert at Sta. 12+40 instead of cast-in-place
+    due_date: null
+    owner: null
+    match: "update: Culvert replacement design at Sta. 12+40 (90% plans)"
+  - type: action_item
+    project: RVS-2041
+    summary: Run the 100-year storm scenario in the hydraulic model
+    due_date: 2026-10-14
+    owner: Alex Romero
+    match: "update: Complete hydraulic model for 25-year storm"
+  - type: action_item
+    project: RVS-2041
+    summary: Survey the culvert inlet
+    due_date: null
+    owner: Casey Brooks
+    match: new

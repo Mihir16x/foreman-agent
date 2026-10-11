@@ -1,0 +1,19 @@
+id: case_14
+project: OAK-1187
+kind: rfi
+title: "RFI 03 - Deck overlay thickness"
+received: 2026-10-05
+text: |
+  RFI No. 03
+  Project: Oak Street Bridge Rehabilitation
+  From: Marcus Reed, Harlan County DOT
+
+  The deck inspection report lists the existing overlay as 1.5 inches,
+  but the plan sheets show 2 inches. Please clarify which is correct.
+expected:
+  - type: request
+    project: OAK-1187
+    summary: Clarify whether the existing deck overlay is 1.5 or 2 inches
+    due_date: null
+    owner: null
+    match: new

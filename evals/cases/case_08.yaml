@@ -1,0 +1,20 @@
+id: case_08
+project: CR12-0459
+kind: email
+title: "Pavement design question"
+received: 2026-10-08
+text: |
+  Hi Jordan,
+
+  Would it be possible to include a cost comparison of concrete versus
+  asphalt in the pavement design report? Our commissioners will ask.
+
+  Teresa Nguyen
+  Harlan County DOT
+expected:
+  - type: request
+    project: CR12-0459
+    summary: Include a concrete vs asphalt cost comparison in the pavement design report
+    due_date: null
+    owner: null
+    match: "update: Pavement design report"

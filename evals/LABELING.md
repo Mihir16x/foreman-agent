@@ -15,3 +15,6 @@ Rules:
 - Status updates with nothing new ("still on track") are not items.
 - Each item has a `match` field for reconciliation: `new`, or `update: <existing task title>`
   when it changes or relates to an existing task.
+- "Next <weekday>" means that weekday in the following week (sent Tuesday Oct 6, "next Friday" = Oct 16).
+- Vague timing ("next week", "early November") and dates tied to events ("before the 30% review") are null.
+- An owner is only set if the document names who will do it.

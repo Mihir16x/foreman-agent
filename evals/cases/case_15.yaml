@@ -1,0 +1,27 @@
+id: case_15
+project: LKV-3302
+kind: email
+title: "Phase 1 plat changes"
+received: 2026-10-08
+text: |
+  Hi Morgan,
+
+  We've decided to drop lots 31 and 32 from phase 1, so please leave them
+  out of the preliminary plat. Also, the county moved its submission
+  cut-off, so we need the plat submitted by November 13 rather than
+  November 16.
+
+  Priya
+expected:
+  - type: decision
+    project: LKV-3302
+    summary: Drop lots 31 and 32 from phase 1 of the preliminary plat
+    due_date: null
+    owner: null
+    match: "update: Submit preliminary plat to county"
+  - type: deadline
+    project: LKV-3302
+    summary: Preliminary plat submission now due November 13
+    due_date: 2026-11-13
+    owner: null
+    match: "update: Submit preliminary plat to county"

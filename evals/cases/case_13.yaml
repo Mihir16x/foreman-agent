@@ -1,0 +1,23 @@
+id: case_13
+project: RVS-2041
+kind: email
+title: "Public meeting logistics"
+received: 2026-10-09
+text: |
+  Hi Sam,
+
+  Council chambers are available November 5 or November 12. Let's go
+  with November 12, since the 5th conflicts with the budget hearing.
+
+  Parking at city hall can be tight in the evening, so you may want to
+  arrive early. The AV system works fine with laptops. Coffee will be
+  provided by the clerk's office.
+
+  Dana
+expected:
+  - type: decision
+    project: RVS-2041
+    summary: Public meeting set for November 12 in council chambers
+    due_date: 2026-11-12
+    owner: null
+    match: "update: Schedule public meeting with residents"

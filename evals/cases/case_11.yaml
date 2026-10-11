@@ -1,0 +1,20 @@
+id: case_11
+project: LKV-3302
+kind: report
+title: "Geotechnical boring logs - Lots 14-18"
+received: 2026-10-09
+text: |
+  Geotechnical Data Transmittal
+  Prepared for: Lakeview Homes LLC
+
+  Boring logs B-1 through B-6 for lots 14-18 are attached. Soils are
+  generally stiff clay. Groundwater was encountered at 8 feet in boring
+  B-4. We recommend the retaining wall designer account for groundwater
+  at that depth.
+expected:
+  - type: request
+    project: LKV-3302
+    summary: Account for groundwater at 8 feet (boring B-4) in the retaining wall design
+    due_date: null
+    owner: null
+    match: "update: Retaining wall design at lots 14-18"

@@ -1,0 +1,19 @@
+id: case_12
+project: CR12-0459
+kind: email
+title: "Driveway culverts"
+received: 2026-10-02
+text: |
+  Hi Jordan,
+
+  Could Casey add the two driveway culverts near Sta. 52+10 to the
+  survey? We'd like them picked up before the 30% review.
+
+  Teresa
+expected:
+  - type: request
+    project: CR12-0459
+    summary: Add the two driveway culverts near Sta. 52+10 to the survey
+    due_date: null
+    owner: Casey Brooks
+    match: new

@@ -1,0 +1,22 @@
+id: case_07
+project: LKV-3302
+kind: email
+title: "Erosion control plan"
+received: 2026-10-06
+text: |
+  Hi Morgan,
+
+  The county reviewer asked to see an early look at erosion control.
+  Could you send us a draft of the erosion and sediment control plan
+  by next Friday?
+
+  Thanks,
+  Priya Shah
+  Lakeview Homes
+expected:
+  - type: request
+    project: LKV-3302
+    summary: Send a draft of the erosion and sediment control plan
+    due_date: 2026-10-16
+    owner: null
+    match: "update: Erosion and sediment control plan"
