@@ -14,7 +14,7 @@ with connect() as conn:
         "select code, name, client_name, client_email from projects order by code"
     ).fetchall()
 
-kept, dropped = extract_items(case["title"], case["text"], case["received"], projects)
+kept, dropped = extract_items(case["title"], case["text"], case["received"], projects, case["project"])
 
 print(f"\n=== Foreman found {len(kept)} ===")
 for item in kept:

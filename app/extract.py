@@ -25,7 +25,8 @@ def quote_found(quote: str, document: str) -> bool:
     return normalize(quote) in normalize(document)
 
 
-def extract_items(title: str, text: str, received: date, projects: list[dict]):
+def extract_items(title: str, text: str, received: date, projects: list[dict],
+                  filed_under: str | None = None):
     """Return (kept, dropped): items whose quote checks out, and items that failed the check."""
     prompt = EXTRACTION_PROMPT.format(
         projects="\n".join(
@@ -35,6 +36,11 @@ def extract_items(title: str, text: str, received: date, projects: list[dict]):
         received=received.strftime("%A, %B %d, %Y"),
         title=title,
         text=text,
+        filed_under=(
+            f"This document was filed under project {filed_under}. Assign items to it "
+            f"unless the text is clearly about a different project."
+            if filed_under else "This document has not been filed under a project yet."
+        ),
     )
     model = get_llm().with_structured_output(Extraction)
 
@@ -52,5 +58,11 @@ def extract_items(title: str, text: str, received: date, projects: list[dict]):
     kept: list[ExtractedItem] = []
     dropped: list[ExtractedItem] = []
     for item in result.items:
-        (kept if quote_found(item.source_quote, text) else dropped).append(item)
+        if not quote_found(item.source_quote, text):
+            dropped.append(item)
+            continue
+        # The owner's name must appear in the quoted evidence; a greeting doesn't count.
+        if item.owner and item.owner.split()[0].lower() not in normalize(item.source_quote):
+            item.owner = None
+        kept.append(item)
     return kept, dropped

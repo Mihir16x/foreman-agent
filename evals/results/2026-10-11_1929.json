@@ -1,0 +1,527 @@
+{
+  "precision": 0.6785714285714286,
+  "recall": 0.8636363636363636,
+  "cases": [
+    {
+      "case": "case_01",
+      "expected": [
+        {
+          "type": "request",
+          "project": "RVS-2041",
+          "summary": "Submit the DEQ stormwater permit application now that the owner authorization form is signed",
+          "due_date": null,
+          "owner": null,
+          "match": "update: Submit stormwater permit application to state DEQ"
+        },
+        {
+          "type": "request",
+          "project": "RVS-2041",
+          "summary": "Tell the client whether adding a 100-year storm check to the hydraulic model would affect the schedule",
+          "due_date": "2026-10-16",
+          "owner": null,
+          "match": "new"
+        }
+      ],
+      "found": [
+        {
+          "type": "request",
+          "project": "RVS-2041",
+          "summary": "Submit the DEQ stormwater permit application.",
+          "due_date": null,
+          "owner": null
+        },
+        {
+          "type": "decision",
+          "project": "RVS-2041",
+          "summary": "Owner authorization form has been signed and provided.",
+          "due_date": null,
+          "owner": null
+        },
+        {
+          "type": "request",
+          "project": "RVS-2041",
+          "summary": "Confirm by October 16 whether adding a 100-year storm check to the hydraulic model would affect the schedule.",
+          "due_date": "2026-10-16",
+          "owner": null
+        }
+      ],
+      "correct": 2,
+      "problems": [
+        "extra: Owner authorization form has been signed and provided."
+      ]
+    },
+    {
+      "case": "case_02",
+      "expected": [
+        {
+          "type": "decision",
+          "project": "OAK-1187",
+          "summary": "Lane closure limited to nights only, 9pm to 5am",
+          "due_date": null,
+          "owner": null,
+          "match": "update: Traffic control plan for lane closure"
+        },
+        {
+          "type": "action_item",
+          "project": "OAK-1187",
+          "summary": "Send the revised traffic control plan to the County",
+          "due_date": "2026-10-30",
+          "owner": "Jordan Lee",
+          "match": "update: Traffic control plan for lane closure"
+        },
+        {
+          "type": "action_item",
+          "project": "OAK-1187",
+          "summary": "Call the power company to push for relocation dates",
+          "due_date": null,
+          "owner": "Marcus Reed",
+          "match": "update: Coordinate power line relocation with utility"
+        }
+      ],
+      "found": [
+        {
+          "type": "deadline",
+          "project": "OAK-1187",
+          "summary": "Load rating analysis due October 21",
+          "due_date": "2026-10-21",
+          "owner": "Riley Chen"
+        },
+        {
+          "type": "decision",
+          "project": "OAK-1187",
+          "summary": "Lane closure limited to nights only (9pm to 5am)",
+          "due_date": null,
+          "owner": null
+        },
+        {
+          "type": "action_item",
+          "project": "OAK-1187",
+          "summary": "Send revised traffic control plan to Marcus",
+          "due_date": "2026-10-30",
+          "owner": "Jordan Lee"
+        },
+        {
+          "type": "action_item",
+          "project": "OAK-1187",
+          "summary": "Call power company to push for utility relocation dates",
+          "due_date": null,
+          "owner": "Marcus Reed"
+        },
+        {
+          "type": "deadline",
+          "project": "OAK-1187",
+          "summary": "Next meeting scheduled",
+          "due_date": "2026-10-20",
+          "owner": null
+        }
+      ],
+      "correct": 3,
+      "problems": [
+        "extra: Load rating analysis due October 21",
+        "extra: Next meeting scheduled"
+      ]
+    },
+    {
+      "case": "case_03",
+      "expected": [
+        {
+          "type": "request",
+          "project": "LKV-3302",
+          "summary": "Include a pocket park near lot 22 in the revised lot layout",
+          "due_date": null,
+          "owner": null,
+          "match": "update: Revise lot layout per client feedback"
+        },
+        {
+          "type": "deadline",
+          "project": "LKV-3302",
+          "summary": "Revised lot layout now due October 20",
+          "due_date": "2026-10-20",
+          "owner": null,
+          "match": "update: Revise lot layout per client feedback"
+        }
+      ],
+      "found": [
+        {
+          "type": "request",
+          "project": "LKV-3302",
+          "summary": "Include a small pocket park near lot 22 in the revised lot layout.",
+          "due_date": null,
+          "owner": null
+        },
+        {
+          "type": "deadline",
+          "project": "LKV-3302",
+          "summary": "Revised lot layout due date changed to October 20, 2026 for the board meeting.",
+          "due_date": "2026-10-20",
+          "owner": null
+        }
+      ],
+      "correct": 2,
+      "problems": []
+    },
+    {
+      "case": "case_04",
+      "expected": [
+        {
+          "type": "request",
+          "project": "CR12-0459",
+          "summary": "Confirm the design speed for the curve at Sta. 45+00 and provide superelevation calculations",
+          "due_date": "2026-10-19",
+          "owner": null,
+          "match": "new"
+        }
+      ],
+      "found": [
+        {
+          "type": "request",
+          "project": "CR12-0459",
+          "summary": "Confirm the design speed used for the horizontal curve at Sta. 45+00 and provide the superelevation calculations.",
+          "due_date": "2026-10-19",
+          "owner": null
+        }
+      ],
+      "correct": 1,
+      "problems": []
+    },
+    {
+      "case": "case_05",
+      "expected": [
+        {
+          "type": "decision",
+          "project": "OAK-1187",
+          "summary": "County approved the strip seal alternative for the expansion joints",
+          "due_date": null,
+          "owner": null,
+          "match": "update: Expansion joint replacement specifications"
+        },
+        {
+          "type": "request",
+          "project": "CR12-0459",
+          "summary": "Hold the right-of-way acquisition exhibits until county legal confirms the parcel list",
+          "due_date": null,
+          "owner": null,
+          "match": "update: Right-of-way acquisition exhibits"
+        }
+      ],
+      "found": [
+        {
+          "type": "decision",
+          "project": "OAK-1187",
+          "summary": "Approved the strip seal alternative for the expansion joints.",
+          "due_date": null,
+          "owner": null
+        },
+        {
+          "type": "request",
+          "project": "OAK-1187",
+          "summary": "Use the approved strip seal alternative in the project specifications.",
+          "due_date": null,
+          "owner": null
+        },
+        {
+          "type": "request",
+          "project": "CR12-0459",
+          "summary": "Hold off on the right-of-way acquisition exhibits until the parcel list is confirmed by legal.",
+          "due_date": null,
+          "owner": null
+        }
+      ],
+      "correct": 2,
+      "problems": [
+        "extra: Use the approved strip seal alternative in the project specifications."
+      ]
+    },
+    {
+      "case": "case_06",
+      "expected": [],
+      "found": [],
+      "correct": 0,
+      "problems": []
+    },
+    {
+      "case": "case_07",
+      "expected": [
+        {
+          "type": "request",
+          "project": "LKV-3302",
+          "summary": "Send a draft of the erosion and sediment control plan",
+          "due_date": "2026-10-16",
+          "owner": null,
+          "match": "update: Erosion and sediment control plan"
+        }
+      ],
+      "found": [
+        {
+          "type": "request",
+          "project": "LKV-3302",
+          "summary": "Send a draft of the erosion and sediment control plan.",
+          "due_date": "2026-10-16",
+          "owner": null
+        }
+      ],
+      "correct": 1,
+      "problems": []
+    },
+    {
+      "case": "case_08",
+      "expected": [
+        {
+          "type": "request",
+          "project": "CR12-0459",
+          "summary": "Include a concrete vs asphalt cost comparison in the pavement design report",
+          "due_date": null,
+          "owner": null,
+          "match": "update: Pavement design report"
+        }
+      ],
+      "found": [
+        {
+          "type": "request",
+          "project": "CR12-0459",
+          "summary": "Include a cost comparison of concrete versus asphalt in the pavement design report.",
+          "due_date": null,
+          "owner": null
+        }
+      ],
+      "correct": 1,
+      "problems": []
+    },
+    {
+      "case": "case_09",
+      "expected": [
+        {
+          "type": "decision",
+          "project": "RVS-2041",
+          "summary": "Use a precast box culvert at Sta. 12+40 instead of cast-in-place",
+          "due_date": null,
+          "owner": null,
+          "match": "update: Culvert replacement design at Sta. 12+40 (90% plans)"
+        },
+        {
+          "type": "action_item",
+          "project": "RVS-2041",
+          "summary": "Run the 100-year storm scenario in the hydraulic model",
+          "due_date": "2026-10-14",
+          "owner": "Alex Romero",
+          "match": "update: Complete hydraulic model for 25-year storm"
+        },
+        {
+          "type": "action_item",
+          "project": "RVS-2041",
+          "summary": "Survey the culvert inlet",
+          "due_date": null,
+          "owner": "Casey Brooks",
+          "match": "new"
+        }
+      ],
+      "found": [
+        {
+          "type": "decision",
+          "project": "RVS-2041",
+          "summary": "Use a precast box culvert instead of cast-in-place at Sta. 12+40.",
+          "due_date": null,
+          "owner": null
+        },
+        {
+          "type": "action_item",
+          "project": "RVS-2041",
+          "summary": "Run the 100-year storm scenario in the hydraulic model.",
+          "due_date": "2026-10-14",
+          "owner": "Alex Romero"
+        },
+        {
+          "type": "action_item",
+          "project": "RVS-2041",
+          "summary": "Survey the culvert inlet.",
+          "due_date": null,
+          "owner": "Casey Brooks"
+        }
+      ],
+      "correct": 3,
+      "problems": []
+    },
+    {
+      "case": "case_10",
+      "expected": [
+        {
+          "type": "deadline",
+          "project": "OAK-1187",
+          "summary": "Bid documents now due November 20",
+          "due_date": "2026-11-20",
+          "owner": null,
+          "match": "update: Prepare bid documents"
+        }
+      ],
+      "found": [
+        {
+          "type": "request",
+          "project": "OAK-1187",
+          "summary": "Client requests the bid documents be provided by November 20.",
+          "due_date": "2026-11-20",
+          "owner": null
+        },
+        {
+          "type": "decision",
+          "project": "OAK-1187",
+          "summary": "Client's board approved the funding.",
+          "due_date": "2026-10-08",
+          "owner": null
+        }
+      ],
+      "correct": 0,
+      "problems": [
+        "wrong fields on 'Bid documents now due November 20': type expected deadline got request",
+        "extra: Client's board approved the funding."
+      ]
+    },
+    {
+      "case": "case_11",
+      "expected": [
+        {
+          "type": "request",
+          "project": "LKV-3302",
+          "summary": "Account for groundwater at 8 feet (boring B-4) in the retaining wall design",
+          "due_date": null,
+          "owner": null,
+          "match": "update: Retaining wall design at lots 14-18"
+        }
+      ],
+      "found": [
+        {
+          "type": "request",
+          "project": "LKV-3302",
+          "summary": "Retaining wall designer should account for groundwater encountered at 8 ft in boring B-4.",
+          "due_date": null,
+          "owner": "retaining wall designer"
+        }
+      ],
+      "correct": 0,
+      "problems": [
+        "wrong fields on 'Account for groundwater at 8 feet (boring B-4) in the retaining wall design': owner expected None got retaining wall designer"
+      ]
+    },
+    {
+      "case": "case_12",
+      "expected": [
+        {
+          "type": "request",
+          "project": "CR12-0459",
+          "summary": "Add the two driveway culverts near Sta. 52+10 to the survey",
+          "due_date": null,
+          "owner": "Casey Brooks",
+          "match": "new"
+        }
+      ],
+      "found": [
+        {
+          "type": "request",
+          "project": "CR12-0459",
+          "summary": "Add the two driveway culverts near Sta. 52+10 to the survey.",
+          "due_date": null,
+          "owner": "Casey"
+        }
+      ],
+      "correct": 1,
+      "problems": []
+    },
+    {
+      "case": "case_13",
+      "expected": [
+        {
+          "type": "decision",
+          "project": "RVS-2041",
+          "summary": "Public meeting set for November 12 in council chambers",
+          "due_date": "2026-11-12",
+          "owner": null,
+          "match": "update: Schedule public meeting with residents"
+        }
+      ],
+      "found": [
+        {
+          "type": "decision",
+          "project": null,
+          "summary": "Public meeting scheduled for November 12 in the council chambers.",
+          "due_date": "2026-11-12",
+          "owner": null
+        }
+      ],
+      "correct": 0,
+      "problems": [
+        "wrong fields on 'Public meeting set for November 12 in council chambers': project expected RVS-2041 got None"
+      ]
+    },
+    {
+      "case": "case_14",
+      "expected": [
+        {
+          "type": "request",
+          "project": "OAK-1187",
+          "summary": "Clarify whether the existing deck overlay is 1.5 or 2 inches",
+          "due_date": null,
+          "owner": null,
+          "match": "new"
+        }
+      ],
+      "found": [
+        {
+          "type": "request",
+          "project": "OAK-1187",
+          "summary": "Clarify whether the existing deck overlay thickness is 1.5 inches or 2 inches.",
+          "due_date": null,
+          "owner": null
+        }
+      ],
+      "correct": 1,
+      "problems": []
+    },
+    {
+      "case": "case_15",
+      "expected": [
+        {
+          "type": "decision",
+          "project": "LKV-3302",
+          "summary": "Drop lots 31 and 32 from phase 1 of the preliminary plat",
+          "due_date": null,
+          "owner": null,
+          "match": "update: Submit preliminary plat to county"
+        },
+        {
+          "type": "deadline",
+          "project": "LKV-3302",
+          "summary": "Preliminary plat submission now due November 13",
+          "due_date": "2026-11-13",
+          "owner": null,
+          "match": "update: Submit preliminary plat to county"
+        }
+      ],
+      "found": [
+        {
+          "type": "decision",
+          "project": "LKV-3302",
+          "summary": "Drop lots 31 and 32 from phase 1.",
+          "due_date": null,
+          "owner": null
+        },
+        {
+          "type": "request",
+          "project": "LKV-3302",
+          "summary": "Leave lots 31 and 32 out of the preliminary plat.",
+          "due_date": null,
+          "owner": null
+        },
+        {
+          "type": "deadline",
+          "project": "LKV-3302",
+          "summary": "Plat submission due by November 13 (moved from November 16).",
+          "due_date": "2026-11-13",
+          "owner": null
+        }
+      ],
+      "correct": 2,
+      "problems": [
+        "extra: Leave lots 31 and 32 out of the preliminary plat."
+      ]
+    }
+  ]
+}
