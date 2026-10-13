@@ -36,6 +36,8 @@ create table documents (
     title        text not null,
     received_at  timestamptz not null default now(),
     raw_text     text not null,
+    intake_status text not null default 'new'
+            check (intake_status in ('new', 'proposed', 'no_changes', 'no_items', 'needs_manual_review')),
     -- searchable version of the text, kept up to date automatically
     tsv          tsvector generated always as
                  (to_tsvector('english', title || ' ' || raw_text)) stored
