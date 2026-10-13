@@ -22,6 +22,7 @@ create table tasks (
     status          text not null default 'open'
                     check (status in ('open', 'blocked', 'done')),
     blocked_reason  text,
+    notes           text,
     source_item_id  int,                         -- which extracted item created it, if any
     created_at      timestamptz not null default now(),
     updated_at      timestamptz not null default now()

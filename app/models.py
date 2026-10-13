@@ -27,3 +27,26 @@ class ExtractedItem(BaseModel):
 
 class Extraction(BaseModel):
     items: list[ExtractedItem]
+
+class TaskMatch(BaseModel):
+    item_index: int
+    action: Literal["create_task", "update_task", "no_change"]
+    task_id: int | None = Field(
+        default=None, description="Id of the existing task this item is about. Required for update_task."
+    )
+    new_title: str | None = Field(
+        default=None, description="For create_task: a short title in the same style as existing tasks."
+    )
+    new_due_date: date | None = Field(default=None, description="Only if the item states a date.")
+    new_owner: str | None = Field(default=None, description="Only if the item names an owner.")
+    new_status: Literal["open", "blocked"] | None = Field(
+        default=None, description="Set 'open' if the item unblocks a blocked task."
+    )
+    note: str | None = Field(
+        default=None, description="Short note for decisions or extra requirements that don't fit a field."
+    )
+    reason: str = Field(description="One sentence explaining the choice.")
+
+
+class Reconciliation(BaseModel):
+    matches: list[TaskMatch]
