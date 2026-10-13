@@ -8,3 +8,4 @@ langchain-google-genai
 pyyaml
 pytest
 langgraph
+streamlit
