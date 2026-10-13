@@ -62,6 +62,28 @@ Rules:
 - Only set new_due_date or new_owner if the item states them. Never guess.
 - If an item provides what a blocked task was waiting for, set new_status to "open".
 - Use note for decisions or extra requirements that don't fit a field.
-- Return exactly one match per item, using the item numbers shown.
 - Use the original document for context, especially to tell whether something a blocked task was waiting for has now arrived.
+- Return exactly one match per item, using the item numbers shown.
+"""
+
+
+STATUS_PROMPT = """You help a project manager at a civil engineering firm report on a project.
+
+Project: {project}
+Client: {client}
+Today: {today}
+
+Facts from the tracker and recent client documents. Each has an id in brackets:
+{facts}
+
+Write:
+1. outstanding: a short internal answer for the PM: what is still open, what is blocked and why, and what the client asked for recently. Mention anything overdue.
+2. email_subject and email_paragraphs: a concise, professional status update for the client. No greeting or sign-off; those are added separately.
+3. questions_for_client: information or decisions only the client can provide, based on blocked tasks or open requests. Empty if none.
+
+Rules:
+- Every paragraph must list the ids of the facts it is based on in citations. Use only the ids listed above.
+- Use only these facts. Do not invent dates, names, progress, or percentages.
+- Write the email in plain language for the client. Never mention tasks, the tracker, or internal project codes; describe the work itself.
+- Keep the email under 200 words.
 """

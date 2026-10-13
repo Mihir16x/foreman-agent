@@ -50,3 +50,22 @@ class TaskMatch(BaseModel):
 
 class Reconciliation(BaseModel):
     matches: list[TaskMatch]
+
+class CitedParagraph(BaseModel):
+    text: str
+    citations: list[str] = Field(
+        description="Ids of the facts this paragraph is based on, e.g. ['T5', 'I12']."
+    )
+
+
+class StatusDraft(BaseModel):
+    outstanding: list[CitedParagraph] = Field(
+        description="Internal answer for the PM: what is open, blocked (and why), and recently requested."
+    )
+    email_subject: str
+    email_paragraphs: list[CitedParagraph] = Field(
+        description="Body of the client update, without greeting or sign-off."
+    )
+    questions_for_client: list[str] = Field(
+        description="Information or decisions only the client can provide. Empty if none."
+    )

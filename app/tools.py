@@ -44,7 +44,7 @@ def get_open_tasks(project_id: int) -> list[dict]:
     with connect() as conn:
         return conn.execute(
             """
-            select id, title, owner, due_date, status, blocked_reason
+            select id, title, owner, due_date, status, blocked_reason, notes
             from tasks
             where project_id = %s and status <> 'done'
             order by due_date nulls last, id

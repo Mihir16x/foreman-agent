@@ -26,11 +26,22 @@ def test_search_stays_within_one_project():
 
 def test_open_tasks_skip_done_but_include_blocked():
     riverside = find_project("riverside")[0]
-    tasks = get_open_tasks(riverside["id"])
-    statuses = {t["status"] for t in tasks}
-    assert len(tasks) == 5                 # 7 Riverside tasks, 2 are done
-    assert "done" not in statuses
-    assert "blocked" in statuses
+    with connect() as conn:
+        conn.execute(
+            """
+            insert into tasks (project_id, title, status, blocked_reason) values
+              (%s, 'Test task blocked', 'blocked', 'waiting on test'),
+              (%s, 'Test task done', 'done', null)
+            """,
+            (riverside["id"], riverside["id"]),
+        )
+    try:
+        titles = {t["title"] for t in get_open_tasks(riverside["id"])}
+        assert "Test task blocked" in titles   # blocked work still counts as open
+        assert "Test task done" not in titles  # finished work doesn't
+    finally:
+        with connect() as conn:
+            conn.execute("delete from tasks where title like 'Test task%'")
 
 
 def test_propose_change_creates_a_pending_proposal():
