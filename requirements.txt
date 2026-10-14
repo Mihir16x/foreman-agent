@@ -1,11 +1,10 @@
-fastapi
-uvicorn
 psycopg[binary]
 pydantic
 python-dotenv
 langchain
 langchain-google-genai
+langchain-openai
+langgraph
 pyyaml
 pytest
-langgraph
 streamlit
