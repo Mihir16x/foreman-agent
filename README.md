@@ -8,7 +8,9 @@ changes. A person approves every change before anything is written.
 > created for this demo. This is a personal project. It contains no employer or client code,
 > data, or proprietary information.
 
-![Review queue](docs/screenshots/review-queue.png)
+![A date conflict and an unblocked task in the review queue](docs/screenshots/review-conflict.png)
+
+_The review queue: a client moved a deadline (old date struck through, the client's exact words as evidence), and new geotechnical data unblocks a waiting task. Nothing changes until a person approves._
 
 ## The problem
 
@@ -28,6 +30,10 @@ hour of re-reading. (Full brief: [docs/workflow-brief.md](docs/workflow-brief.md
 4. **Applies** a change only when a person approves it.
 5. **Reports:** answers "what's outstanding?" and drafts a client status update with citations,
    which also goes through review.
+
+![A new task proposed from an RFI](docs/screenshots/review-new-task.png)
+
+_A new task proposed from a client RFI: the due date comes from the document, and the owner shows as "Not stated" because the RFI didn't name one, so Foreman didn't guess._
 
 ## How it works
 
